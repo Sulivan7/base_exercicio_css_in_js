@@ -1,0 +1,20 @@
+import { configureStore } from '@reduxjs/toolkit'
+
+export const store = configureStore({
+  reducer: {
+    // Adicione seus reducers aqui quando necessário
+  }
+})
+
+export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch
+export type AppStore = typeof store
+
+export const configuraStore = (preloadedState?: Partial<RootState>) => {
+  return configureStore({
+    reducer: {
+      // Adicione seus reducers aqui quando necessário
+    },
+    preloadedState
+  })
+}
